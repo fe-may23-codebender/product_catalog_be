@@ -6,7 +6,11 @@
   "scripts": {
     "start": "ts-node src/server.ts",
     "dev": "nodemon src/server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier --write . --ignore-path .gitignore",
+    "lint": "eslint . --ignore-path .gitignore --fix",
+    "fix": "npm run format && npm run lint",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +28,9 @@
     "@typescript-eslint/parser": "^6.4.1",
     "eslint": "^8.48.0",
     "eslint-plugin-node": "^11.1.0",
+    "husky": "^8.0.3",
     "nodemon": "^3.0.1",
+    "prettier": "^3.0.2",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   }
