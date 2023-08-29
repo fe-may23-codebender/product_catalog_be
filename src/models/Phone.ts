@@ -3,8 +3,8 @@ import {
   Table,
   Column,
   HasMany,
-  PrimaryKey,
   DataType,
+  PrimaryKey,
 } from 'sequelize-typescript';
 import { Description } from './Description';
 import { PhoneInterface } from '../types/Phone';
@@ -16,7 +16,9 @@ import { PhoneInterface } from '../types/Phone';
 })
 export class Phone extends Model<PhoneInterface> {
   @PrimaryKey
-  @Column
+  @Column({
+    type: DataType.STRING,
+  })
     id: string;
 
   @Column({
@@ -59,7 +61,7 @@ export class Phone extends Model<PhoneInterface> {
     images: string[];
 
   @HasMany(() => Description)
-    descriptions: Description[];
+    description: Description[];
 
   @Column
     screen: string;

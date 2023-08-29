@@ -18,7 +18,7 @@ export class Description extends Model<DescriptionInterface> {
   @Column
     title: string;
 
-  @Column(DataType.ARRAY(DataType.STRING))
+  @Column(DataType.ARRAY(DataType.TEXT))
     text: string[];
 
   @ForeignKey(() => Phone)

@@ -1,5 +1,3 @@
-import { DescriptionInterface } from './Description';
-
 export interface PhoneInterface {
   id: string;
   namespaceId: string;
@@ -11,7 +9,6 @@ export interface PhoneInterface {
   colorsAvailable: string[];
   color: string;
   images: string[];
-  description: DescriptionInterface[];
   screen: string;
   resolution: string;
   processor: string;
