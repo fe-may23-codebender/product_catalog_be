@@ -2,12 +2,12 @@ import {
   Model,
   Table,
   Column,
-  DataType,
   PrimaryKey,
   ForeignKey,
 } from 'sequelize-typescript';
-import { Phone } from './Phone';
+// import { Phone } from './Phone';
 import { ProductInterface } from '../types/Product';
+import { Phone } from './Phone';
 
 @Table({
   tableName: 'products',
@@ -16,10 +16,7 @@ import { ProductInterface } from '../types/Product';
 })
 export class Product extends Model<ProductInterface> {
   @PrimaryKey
-  @Column({
-    type: DataType.STRING,
-    allowNull: false,
-  })
+  @Column
     id: string;
 
   @Column
@@ -30,6 +27,7 @@ export class Product extends Model<ProductInterface> {
     field: 'phone_id',
   })
     phoneId: string;
+
 
   @Column({
     field: 'item_id',

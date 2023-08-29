@@ -8,7 +8,7 @@
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "format": "prettier --write . --ignore-path .gitignore",
-    "lint": "eslint . --ignore-path node_modules --fix",
+    "lint": "eslint . --ignore-path .gitignore --fix",
     "fix": "npm run lint",
     "prepare": "husky install"
   },

@@ -2,12 +2,14 @@
 
 import { Sequelize } from 'sequelize-typescript';
 import { Product, Phone, Description } from '../models';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const URI =
-  'postgres://codebender:NGWTFjT4naeAHFBTDR4tFRZOM4uuXhxr@dpg-cjm8ahfv9s6c73ekkcs0-a.frankfurt-postgres.render.com/products_db_xp5d';
+const { DB_PASSWORD, DB_HOST, DB_USER, DB_NAME } = process.env;
+const URI = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`;
 
 export const sequelize = new Sequelize(URI, {
-  models: [Description, Phone, Product],
+  models: [Phone, Description, Product],
   dialectOptions: {
     ssl: true,
   },
