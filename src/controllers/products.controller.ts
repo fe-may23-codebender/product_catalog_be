@@ -4,7 +4,8 @@ import { Request, Response } from 'express';
 import { getAllProducts, getById } from '../services/products.service';
 
 export const getAll = async (req: Request, res: Response) => {
-  const products = await getAllProducts();
+  const query = req.query;
+  const products = await getAllProducts(query);
 
   res.send(products);
 };
