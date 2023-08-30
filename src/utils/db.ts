@@ -7,7 +7,6 @@ dotenv.config();
 
 const { DB_PASSWORD, DB_HOST, DB_USER, DB_NAME } = process.env;
 const URI = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`;
-console.log(URI);
 
 export const sequelize = new Sequelize(URI, {
   models: [Description, Phone, Product],
