@@ -3,13 +3,13 @@
 import { Product } from '../models/Product';
 
 export const getAllProducts = async () => {
-  const users = await Product.findAll();
+  const products = await Product.findAll();
 
-  return users;
+  return products;
 };
 
 export const getById = async (productId: string) => {
-  const user = await Product.findByPk(productId);
+  const product = await Product.findByPk(productId);
 
-  return user;
+  return product;
 };

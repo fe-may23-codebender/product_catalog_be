@@ -1,0 +1,23 @@
+'use strict';
+
+import { Request, Response } from 'express';
+import { getAllDescriptions, getById } from '../services/descriptions.service';
+
+export const getAll = async (req: Request, res: Response) => {
+  const descriptions = await getAllDescriptions();
+
+  res.send(descriptions);
+};
+
+export const getOne = async (req: Request, res: Response) => {
+  const { descriptionId } = req.params;
+  const foundDescription = await getById(descriptionId);
+
+  if (!foundDescription) {
+    res.status(404).send('Description not found');
+
+    return;
+  }
+
+  res.status(200).send(foundDescription);
+};
