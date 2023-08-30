@@ -16,6 +16,23 @@ enum sortOptions {
   TITLE = 'title',
 }
 
+enum perPageOptions {
+  FOUR = '4',
+  EIGHT = '8',
+  SIXTEEN = '16',
+  ALL = 'all',
+}
+
+export function perPageValidation(perPage: string) {
+  if (perPage === perPageOptions.EIGHT
+    || perPage === perPageOptions.FOUR
+    || perPage === perPageOptions.SIXTEEN) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 export const getAllProducts = async (query: Query) => {
   const { category, sortBy, search, page, perPage } = query;
   let products = await Product.findAll();
@@ -53,13 +70,19 @@ export const getAllProducts = async (query: Query) => {
   }
 
   if (page && perPage) {
-    const pageNumber = parseInt(page);
-    const itemsPerPage = parseInt(perPage);
+    if (perPage === perPageOptions.ALL && page === '1') {
+      return products;
+    } else if (perPageValidation(perPage)) {
+      const pageNumber = parseInt(page);
+      const itemsPerPage = parseInt(perPage);
 
-    const startIndex = (pageNumber - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
+      const startIndex = (pageNumber - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
 
-    products = products.slice(startIndex, endIndex);
+      products = products.slice(startIndex, endIndex);
+    } else {
+      throw new Error('Invalid perPage or page number');
+    }
   }
 
   return products;
