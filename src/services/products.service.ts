@@ -10,6 +10,12 @@ type Query = {
   perPage?: string,
 };
 
+enum sortOptions {
+  AGE = 'age',
+  PRICE = 'price',
+  TITLE = 'title',
+}
+
 export const getAllProducts = async (query: Query) => {
   const { category, sortBy, search, page, perPage } = query;
   let products = await Product.findAll();
@@ -21,13 +27,13 @@ export const getAllProducts = async (query: Query) => {
   if (sortBy) {
     products = products.sort((prevProduct, currProduct) => {
       switch (sortBy) {
-      case 'newest':
+      case sortOptions.AGE:
         return currProduct.year - prevProduct.year;
 
-      case 'cheapest':
+      case sortOptions.PRICE:
         return prevProduct.price - currProduct.price;
 
-      case 'alphabetically':
+      case sortOptions.TITLE:
         return prevProduct.name.localeCompare(currProduct.name);
 
       default:
