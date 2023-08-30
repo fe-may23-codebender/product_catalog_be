@@ -14,7 +14,7 @@ export const getOne = async (req: Request, res: Response) => {
   const foundProduct = await getById(productId);
 
   if (!foundProduct) {
-    res.status(404).send('User not found');
+    res.status(404).send('Product not found');
 
     return;
   }

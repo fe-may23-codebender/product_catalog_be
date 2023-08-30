@@ -5,6 +5,8 @@ dotenv.config();
 
 import { connect } from './utils/db';
 import { productRouter } from './routers/products.router';
+import { phonesRouter } from './routers/phones.router';
+import { descriptionsRouter } from './routers/descriptions.router';
 
 connect();
 
@@ -19,7 +21,9 @@ app
   .get('/', (req, res) => {
     res.send('Product catalog API');
   })
-  .use('/products', productRouter);
+  .use('/products', productRouter)
+  .use('/phones', phonesRouter)
+  .use('/descriptions', descriptionsRouter);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
