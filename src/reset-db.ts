@@ -7,7 +7,7 @@ import path from 'path';
 
 function reset() {
   return sequelize
-    .sync()
+    .sync({ force: true })
     .then(() => {
       console.log('success');
     })
