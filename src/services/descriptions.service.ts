@@ -8,8 +8,12 @@ export const getAllDescriptions = async () => {
   return descriptions;
 };
 
-export const getById = async (descriptionId: string) => {
-  const description = await Description.findByPk(descriptionId);
+export const getByPhoneId = async (phoneId: string) => {
+  const descriptions = await Description.findAll({
+    where: {
+      phoneId: phoneId,
+    }as { phoneId: string },
+  });
 
-  return description;
+  return descriptions;
 };

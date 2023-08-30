@@ -1,7 +1,10 @@
 'use strict';
 
 import { Request, Response } from 'express';
-import { getAllDescriptions, getById } from '../services/descriptions.service';
+import {
+  getAllDescriptions,
+  getByPhoneId,
+} from '../services/descriptions.service';
 
 export const getAll = async (req: Request, res: Response) => {
   const descriptions = await getAllDescriptions();
@@ -10,8 +13,8 @@ export const getAll = async (req: Request, res: Response) => {
 };
 
 export const getOne = async (req: Request, res: Response) => {
-  const { descriptionId } = req.params;
-  const foundDescription = await getById(descriptionId);
+  const { phoneId } = req.params;
+  const foundDescription = await getByPhoneId(phoneId);
 
   if (!foundDescription) {
     res.status(404).send('Description not found');
