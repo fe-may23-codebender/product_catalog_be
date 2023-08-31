@@ -5,7 +5,6 @@ import {
   PrimaryKey,
   ForeignKey,
 } from 'sequelize-typescript';
-// import { Phone } from './Phone';
 import { ProductInterface } from '../types/Product';
 import { Phone } from './Phone';
 

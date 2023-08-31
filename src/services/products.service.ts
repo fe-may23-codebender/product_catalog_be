@@ -24,6 +24,7 @@ enum perPageOptions {
 }
 
 export function perPageValidation(perPage: string) {
+  // use another way to filter, sort and paginate data
   if (perPage === perPageOptions.EIGHT
     || perPage === perPageOptions.FOUR
     || perPage === perPageOptions.SIXTEEN) {
@@ -81,7 +82,7 @@ export const getAllProducts = async (query: Query) => {
 
       products = products.slice(startIndex, endIndex);
     } else {
-      throw new Error('Invalid perPage or page number');
+      throw new Error('Invalid perPage or page number');   // move it to controller to send an error
     }
   }
 

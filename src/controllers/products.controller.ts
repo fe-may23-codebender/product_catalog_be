@@ -5,6 +5,7 @@ import { getAllProducts, getById } from '../services/products.service';
 
 export const getAll = async (req: Request, res: Response) => {
   const query = req.query;
+  // check if query is valid here
   const products = await getAllProducts(query);
 
   res.send(products);
