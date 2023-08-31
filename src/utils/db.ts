@@ -11,8 +11,10 @@ const URI = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`;
 export const sequelize = new Sequelize(URI, {
   models: [Description, Phone, Product],
   dialectOptions: {
-    ssl: true,
-    rejectUnauthorized: true,
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    }
   },
 });
 

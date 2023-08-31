@@ -2,11 +2,9 @@ import {
   Model,
   Table,
   Column,
-  HasMany,
   DataType,
   PrimaryKey,
 } from 'sequelize-typescript';
-import { Description } from './Description';
 import { PhoneInterface } from '../types/Phone';
 
 @Table({
@@ -60,9 +58,6 @@ export class Phone extends Model<PhoneInterface> {
   @Column(DataType.ARRAY(DataType.STRING))
     images: string[];
 
-  @HasMany(() => Description)
-    description: Description[];
-
   @Column
     screen: string;
 
@@ -81,6 +76,6 @@ export class Phone extends Model<PhoneInterface> {
   @Column
     zoom: string;
 
-  @Column
-    cell: string;
+  @Column(DataType.ARRAY(DataType.STRING))
+    cell: string[];
 }
