@@ -24,7 +24,7 @@ enum perPageOptions {
 }
 
 export function perPageValidation(perPage: string) {
-  // use another way to filter, sort and paginate data
+  // use another way to filter, sort and paginate data using sql query
   if (perPage === perPageOptions.EIGHT
     || perPage === perPageOptions.FOUR
     || perPage === perPageOptions.SIXTEEN) {
