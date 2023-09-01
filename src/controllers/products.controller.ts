@@ -3,10 +3,29 @@
 import { Request, Response } from 'express';
 import { getAllProducts, getById } from '../services/products.service';
 
+const sortOptions = ['age', 'title', 'price', ''];
+const perPageOptions = ['4', '8', '16', 'all'];
+
 export const getAll = async (req: Request, res: Response) => {
   const query = req.query;
-  // check if query is valid here
-  const products = await getAllProducts(query);
+  const {
+    search = '',
+    perPage = 'all',
+    page = '1',
+    sortBy = '',
+  } = query;
+  if (typeof sortBy !== 'string'
+    || !sortOptions.includes(sortBy)
+    || typeof perPage !== 'string'
+    || !perPageOptions.includes(perPage)
+    || (perPage === 'all' && page !== '1')
+    || typeof page !== 'string'
+    || typeof search !== 'string') {
+    res.sendStatus(422);
+    return;
+  }
+
+  const products = await getAllProducts({ search, perPage, page, sortBy });
 
   res.send(products);
 };

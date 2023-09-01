@@ -1,64 +1,72 @@
 'use strict';
 
+import { Order } from 'sequelize';
 import { Product } from '../models/Product';
+import { ProductInterface } from '../types/Product';
 
 type Query = {
-  category?: string,
-  sortBy?: string,
-  search?: string,
-  page?: string,
-  perPage?: string,
+  sortBy: string,
+  search: string,
+  page: string,
+  perPage: string,
 };
 
-enum sortOptions {
-  AGE = 'age',
-  PRICE = 'price',
-  TITLE = 'title',
+type countByCategory = {
+  [category: string]: number;
 }
 
-enum perPageOptions {
-  FOUR = '4',
-  EIGHT = '8',
-  SIXTEEN = '16',
-  ALL = 'all',
-}
+function calculateByGroup(products: ProductInterface[]) {
+  const countByGroup: countByCategory = {
+    'phones': 0,
+    'tablets': 0,
+    'accessories': 0,
+  };
 
-export function perPageValidation(perPage: string) {
-  // use another way to filter, sort and paginate data using sql query
-  if (perPage === perPageOptions.EIGHT
-    || perPage === perPageOptions.FOUR
-    || perPage === perPageOptions.SIXTEEN) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-export const getAllProducts = async (query: Query) => {
-  const { category, sortBy, search, page, perPage } = query;
-  let products = await Product.findAll();
-
-  if (category) {
-    products = products.filter(product => product.category === category);
-  }
-
-  if (sortBy) {
-    products = products.sort((prevProduct, currProduct) => {
-      switch (sortBy) {
-      case sortOptions.AGE:
-        return currProduct.year - prevProduct.year;
-
-      case sortOptions.PRICE:
-        return prevProduct.price - currProduct.price;
-
-      case sortOptions.TITLE:
-        return prevProduct.name.localeCompare(currProduct.name);
-
-      default:
-        return 0;
-      }
+  products.forEach(product => {
+    if (!(product.category in countByGroup)) {
+      countByGroup[product.category] = 0;
     }
-    );
+    countByGroup[product.category]++;
+  });
+
+  return countByGroup;
+}
+
+export const getAllProducts = async ({ search, perPage, page, sortBy }: Query) => {
+  let products = await Product.findAll();
+  const allProducts = calculateByGroup(products);
+
+  const order: Order = [];
+
+  switch (sortBy) {
+  case 'age':
+    order.push(['year', 'DESC']);
+    break;
+
+  case 'title':
+    order.push(['name', 'ASC']);
+    break;
+
+  case 'price':
+    order.push(['price', 'ASC']);
+    break;
+
+  default:
+    break;
+  }
+
+  if (perPage === 'all') {
+    products = await Product.findAll({
+      order,
+    });
+  } else {
+    const limit = +perPage;
+    const offset = perPage === '1' ? 0 : (+page - 1) * limit;
+    products = await Product.findAll({
+      offset,
+      limit,
+      order,
+    });
   }
 
   if (search) {
@@ -70,23 +78,10 @@ export const getAllProducts = async (query: Query) => {
     });
   }
 
-  if (page && perPage) {
-    if (perPage === perPageOptions.ALL && page === '1') {
-      return products;
-    } else if (perPageValidation(perPage)) {
-      const pageNumber = parseInt(page);
-      const itemsPerPage = parseInt(perPage);
-
-      const startIndex = (pageNumber - 1) * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
-
-      products = products.slice(startIndex, endIndex);
-    } else {
-      throw new Error('Invalid perPage or page number');   // move it to controller to send an error
-    }
-  }
-
-  return products;
+  return {
+    countByGroup: allProducts,
+    items: products,
+  };
 };
 
 export const getById = async (productId: string) => {
