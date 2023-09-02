@@ -5,9 +5,18 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('phones', {
       id: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
         primaryKey: true,
         allowNull: false,
+      },
+
+      itemId: {
+        type: Sequelize.STRING,
+        references: {
+          model: 'products',
+          key: 'item_id',
+        },
       },
 
       namespaceId: {
@@ -76,7 +85,7 @@ module.exports = {
       },
 
       cell: {
-        type: Sequelize.STRING
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
     });
   },

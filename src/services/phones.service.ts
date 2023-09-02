@@ -8,8 +8,12 @@ export const getAllPhones = async () => {
   return phones;
 };
 
-export const getById = async (productId: string) => {
-  const phone = await Phone.findByPk(productId);
+export const getById = async (itemId: string) => {
+  const phone = await Phone.findAll({
+    where: {
+      itemId: itemId,
+    } as { itemId: string },
+  });
 
   return phone;
 };

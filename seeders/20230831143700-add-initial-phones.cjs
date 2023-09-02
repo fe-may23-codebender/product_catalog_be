@@ -19,7 +19,7 @@ module.exports = {
       const phoneData = JSON.parse(jsonData);
 
       const phone = {
-        id: phoneData.id,
+        itemId: phoneData.itemId,
         namespace_id: phoneData.namespaceId,
         name: phoneData.name,
         capacity_available: phoneData.capacityAvailable,

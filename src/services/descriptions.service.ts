@@ -11,8 +11,8 @@ export const getAllDescriptions = async () => {
 export const getByPhoneId = async (phoneId: string) => {
   const descriptions = await Description.findAll({
     where: {
-      phoneId: phoneId,
-    }as { phoneId: string },
+      itemId: phoneId,
+    } as { itemId: string },
   });
 
   return descriptions;

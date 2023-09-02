@@ -15,9 +15,14 @@ import { PhoneInterface } from '../types/Phone';
 export class Phone extends Model<PhoneInterface> {
   @PrimaryKey
   @Column({
+    type: DataType.INTEGER,
+  })
+    id: number;
+
+  @Column({
     type: DataType.STRING,
   })
-    id: string;
+    itemId: string;
 
   @Column({
     field: 'namespace_id',

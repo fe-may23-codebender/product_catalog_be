@@ -1,0 +1,459 @@
+[
+  {
+    "itemId": "apple-watch-series8-41mm-starlight",
+    "namespaceId": "apple-watch-series8",
+    "name": "Apple Watch Series 8 41mm Starlight",
+    "capacityAvailable": ["32GB"],
+    "capacity": "32GB",
+    "priceRegular": 540,
+    "priceDiscount": 520,
+    "colorsAvailable": ["starlight"],
+    "color": "starlight",
+    "images": [
+      "img/accessories/apple-watch-series8/starlight/00.jpg",
+      "img/accessories/apple-watch-series8/starlight/01.jpg",
+      "img/accessories/apple-watch-series8/starlight/02.jpg",
+      "img/accessories/apple-watch-series8/starlight/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Smooth and seamless. The edge of design.",
+        "text": [
+          "Apple Watch Series 8 features a big, brilliant Always-On display. Narrow borders push the screen right to the edge, resulting in an elegant integration with the curvature of the case."
+        ]
+      },
+      {
+        "title": "Always-On Retina display. Take it all in. Get it all done.",
+        "text": [
+          "The bright Always-On screen makes detailed watch faces look stunning and easy to read, even when your wrist is down.",
+          "The large display accommodates all your favorite complications and makes tapping, typing, and swiping a snap."
+        ]
+      },
+      {
+        "title": "Here's to a healthier you.",
+        "text": [
+          "The more informed you are about your health, the more empowered you are to affect it. Advanced health sensors in Apple Watch Series 8 provide insights to help you better understand your health."
+        ]
+      }
+    ],
+    "screen": "41mm LTPO",
+    "resolution": "352x430",
+    "processor": "S8",
+    "ram": "2GB",
+    "camera": null,
+    "zoom": null,
+    "cell": ["Wi-Fi", "Bluetooth", "NFC"]
+  },
+  {
+    "itemId": "apple-watch-se-midnight",
+    "namespaceId": "apple-watch-se",
+    "name": "Apple Watch SE 40mm Midnight Black",
+    "capacityAvailable": ["32GB"],
+    "capacity": "32GB",
+    "priceRegular": 320,
+    "priceDiscount": 300,
+    "colorsAvailable": ["midnight", "starlight", "white"],
+    "color": "midnight",
+    "images": [
+      "img/accessories/apple-watch-se/midnight/00.jpg",
+      "img/accessories/apple-watch-se/midnight/01.jpg",
+      "img/accessories/apple-watch-se/midnight/02.jpg",
+      "img/accessories/apple-watch-se/midnight/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Fast is fashionable.",
+        "text": [
+          "Powerful sensors for insights about your health and fitness.",
+          "A faster dual-core processor for added performance. Apple Watch SE is feature packed, and it's a better value than ever."
+        ]
+      },
+      {
+        "title": "Crash Detection.",
+        "text": [
+          "A safety feature we hope you'll never need.",
+          "Innovative safety features. Convenient ways to stay connected."
+        ]
+      },
+      {
+        "title": "Here's to a healthier you.",
+        "text": [
+          "The more informed you are about your health, the more empowered you are to affect it. Advanced health sensors in Apple Watch Series 8 provide insights to help you better understand your health."
+        ]
+      }
+    ],
+    "screen": "40mm LTPO",
+    "resolution": "324x394",
+    "processor": "S8",
+    "ram": "2GB",
+    "camera": null,
+    "zoom": null,
+    "cell": ["Wi-Fi", "Bluetooth", "NFC"]
+  },
+  {
+    "itemId": "apple-watch-se-starlight",
+    "namespaceId": "apple-watch-se",
+    "name": "Apple Watch SE 40mm Starlight",
+    "capacityAvailable": ["32GB"],
+    "capacity": "32GB",
+    "priceRegular": 320,
+    "priceDiscount": 300,
+    "colorsAvailable": ["midnight", "starlight", "white"],
+    "color": "starlight",
+    "images": [
+      "img/accessories/apple-watch-se/starlight/00.jpg",
+      "img/accessories/apple-watch-se/starlight/01.jpg",
+      "img/accessories/apple-watch-se/starlight/02.jpg",
+      "img/accessories/apple-watch-se/starlight/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Fast is fashionable.",
+        "text": [
+          "Powerful sensors for insights about your health and fitness.",
+          "A faster dual-core processor for added performance. Apple Watch SE is feature packed, and it's a better value than ever."
+        ]
+      },
+      {
+        "title": "Crash Detection.",
+        "text": [
+          "A safety feature we hope you'll never need.",
+          "Innovative safety features. Convenient ways to stay connected."
+        ]
+      },
+      {
+        "title": "Here's to a healthier you.",
+        "text": [
+          "The more informed you are about your health, the more empowered you are to affect it. Advanced health sensors in Apple Watch Series 8 provide insights to help you better understand your health."
+        ]
+      }
+    ],
+    "screen": "40mm LTPO",
+    "resolution": "324x394",
+    "processor": "S8",
+    "ram": "2GB",
+    "camera": null,
+    "zoom": null,
+    "cell": ["Wi-Fi", "Bluetooth", "NFC"]
+  },
+  {
+    "itemId": "apple-watch-se-white",
+    "namespaceId": "apple-watch-se",
+    "name": "Apple Watch SE 40mm White",
+    "capacityAvailable": ["32GB"],
+    "capacity": "32GB",
+    "priceRegular": 320,
+    "priceDiscount": 300,
+    "colorsAvailable": ["midnight", "starlight", "white"],
+    "color": "white",
+    "images": [
+      "img/accessories/apple-watch-se/white/00.jpg",
+      "img/accessories/apple-watch-se/white/01.jpg",
+      "img/accessories/apple-watch-se/white/02.jpg",
+      "img/accessories/apple-watch-se/white/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Fast is fashionable.",
+        "text": [
+          "Powerful sensors for insights about your health and fitness.",
+          "A faster dual-core processor for added performance. Apple Watch SE is feature packed, and it's a better value than ever."
+        ]
+      },
+      {
+        "title": "Crash Detection.",
+        "text": [
+          "A safety feature we hope you'll never need.",
+          "Innovative safety features. Convenient ways to stay connected."
+        ]
+      },
+      {
+        "title": "Here's to a healthier you.",
+        "text": [
+          "The more informed you are about your health, the more empowered you are to affect it. Advanced health sensors in Apple Watch Series 8 provide insights to help you better understand your health."
+        ]
+      }
+    ],
+    "screen": "40mm LTPO",
+    "resolution": "324x394",
+    "processor": "S8",
+    "ram": "2GB",
+    "camera": null,
+    "zoom": null,
+    "cell": ["Wi-Fi", "Bluetooth", "NFC"]
+  },
+  {
+    "itemId": "apple-pencil-2nd-generation",
+    "namespaceId": "apple-pencil",
+    "name": "Apple Pencil 2nd Generation",
+    "capacityAvailable": null,
+    "capacity": null,
+    "priceRegular": 115,
+    "priceDiscount": 100,
+    "colorsAvailable": ["white"],
+    "color": "white",
+    "images": [
+      "img/accessories/apple-pencil/white/00.jpg",
+      "img/accessories/apple-pencil/white/01.jpg"
+    ],
+    "description": [
+      {
+        "title": "Overview",
+        "text": [
+          "Apple Pencil (2nd generation) delivers pixel-perfect precision and industry-leading low latency, making it great for drawing, sketching, coloring, taking notes, marking up PDFs, and more. And it's as easy and natural to use as a pencil.",
+          "Designed for iPad Pro, iPad Air, and iPad mini, it features a flat edge that attaches magnetically for automatic charging and pairing."
+        ]
+      },
+      {
+        "title": "Tech Specs",
+        "text": [
+          "Length: 6.53 inches (166 mm). Diameter: 0.35 inch (8.9 mm). Weight: 0.73 ounce (20.7 grams)",
+          "Conntection: Bluetooth"
+        ]
+      },
+      {
+        "title": "What's in the Box",
+        "text": [
+          "Apple Pencil (2nd generation)"
+        ]
+      }
+    ],
+    "screen": null,
+    "resolution": null,
+    "processor": null,
+    "ram": null,
+    "camera": null,
+    "zoom": null,
+    "cell": null
+  },
+  {
+    "itemId": "apple-airpods-max-silver",
+    "namespaceId": "apple-airpods-max",
+    "name": "Apple AirPods Max Silver",
+    "capacityAvailable": null,
+    "capacity": null,
+    "priceRegular": 600,
+    "priceDiscount": 570,
+    "colorsAvailable": ["silver", "blue", "green", "pink", "spacegray"],
+    "color": "silver",
+    "images": [
+      "img/accessories/apple-airpods-max/silver/00.jpg",
+      "img/accessories/apple-airpods-max/silver/01.jpg",
+      "img/accessories/apple-airpods-max/silver/02.jpg",
+      "img/accessories/apple-airpods-max/silver/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Introducing AirPods Max",
+        "text": [
+          "Perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.",
+          "The ultimate personal listening experience is here."
+        ]
+      },
+      {
+        "title": "Sounds like an epiphany.",
+        "text": [
+          "AirPods Max combine high-fidelity audio with industry-leading Active Noise Cancellation to deliver an unparalleled listening experience.",
+          "Each part of their custom-built driver works to produce sound with ultra-low distortion across the audible range. From deep, rich bass to accurate mids and crisp, clean highs, you'll hear every note with a new sense of clarity."
+        ]
+      },
+      {
+        "title": "Elaborately simple.",
+        "text": [
+          "AirPods Max inherit all of the wireless, effortless magic of the AirPods family. From setup to Siri commands, they make the listening experience completely fluid — day to day, device to device."
+        ]
+      }
+    ],
+    "screen": null,
+    "resolution": null,
+    "processor": null,
+    "ram": null,
+    "camera": null,
+    "zoom": null,
+    "cell": null
+  },
+  {
+    "itemId": "apple-airpods-max-blue",
+    "namespaceId": "apple-airpods-max",
+    "name": "Apple AirPods Max Blue",
+    "capacityAvailable": null,
+    "capacity": null,
+    "priceRegular": 600,
+    "priceDiscount": 570,
+    "colorsAvailable": ["silver", "blue", "green", "pink", "spacegray"],
+    "color": "blue",
+    "images": [
+      "img/accessories/apple-airpods-max/blue/00.jpg",
+      "img/accessories/apple-airpods-max/blue/01.jpg",
+      "img/accessories/apple-airpods-max/blue/02.jpg",
+      "img/accessories/apple-airpods-max/blue/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Introducing AirPods Max",
+        "text": [
+          "Perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.",
+          "The ultimate personal listening experience is here."
+        ]
+      },
+      {
+        "title": "Sounds like an epiphany.",
+        "text": [
+          "AirPods Max combine high-fidelity audio with industry-leading Active Noise Cancellation to deliver an unparalleled listening experience.",
+          "Each part of their custom-built driver works to produce sound with ultra-low distortion across the audible range. From deep, rich bass to accurate mids and crisp, clean highs, you'll hear every note with a new sense of clarity."
+        ]
+      },
+      {
+        "title": "Elaborately simple.",
+        "text": [
+          "AirPods Max inherit all of the wireless, effortless magic of the AirPods family. From setup to Siri commands, they make the listening experience completely fluid — day to day, device to device."
+        ]
+      }
+    ],
+    "screen": null,
+    "resolution": null,
+    "processor": null,
+    "ram": null,
+    "camera": null,
+    "zoom": null,
+    "cell": null
+  },
+  {
+    "itemId": "apple-airpods-max-green",
+    "namespaceId": "apple-airpods-max",
+    "name": "Apple AirPods Max Green",
+    "capacityAvailable": null,
+    "capacity": null,
+    "priceRegular": 600,
+    "priceDiscount": 570,
+    "colorsAvailable": ["silver", "blue", "green", "pink", "spacegray"],
+    "color": "green",
+    "images": [
+      "img/accessories/apple-airpods-max/green/00.jpg",
+      "img/accessories/apple-airpods-max/green/01.jpg",
+      "img/accessories/apple-airpods-max/green/02.jpg",
+      "img/accessories/apple-airpods-max/green/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Introducing AirPods Max",
+        "text": [
+          "Perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.",
+          "The ultimate personal listening experience is here."
+        ]
+      },
+      {
+        "title": "Sounds like an epiphany.",
+        "text": [
+          "AirPods Max combine high-fidelity audio with industry-leading Active Noise Cancellation to deliver an unparalleled listening experience.",
+          "Each part of their custom-built driver works to produce sound with ultra-low distortion across the audible range. From deep, rich bass to accurate mids and crisp, clean highs, you'll hear every note with a new sense of clarity."
+        ]
+      },
+      {
+        "title": "Elaborately simple.",
+        "text": [
+          "AirPods Max inherit all of the wireless, effortless magic of the AirPods family. From setup to Siri commands, they make the listening experience completely fluid — day to day, device to device."
+        ]
+      }
+    ],
+    "screen": null,
+    "resolution": null,
+    "processor": null,
+    "ram": null,
+    "camera": null,
+    "zoom": null,
+    "cell": null
+  },
+  {
+    "itemId": "apple-airpods-max-pink",
+    "namespaceId": "apple-airpods-max",
+    "name": "Apple AirPods Max Pink",
+    "capacityAvailable": null,
+    "capacity": null,
+    "priceRegular": 600,
+    "priceDiscount": 570,
+    "colorsAvailable": ["silver", "blue", "green", "pink", "spacegray"],
+    "color": "pink",
+    "images": [
+      "img/accessories/apple-airpods-max/pink/00.jpg",
+      "img/accessories/apple-airpods-max/pink/01.jpg",
+      "img/accessories/apple-airpods-max/pink/02.jpg",
+      "img/accessories/apple-airpods-max/pink/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Introducing AirPods Max",
+        "text": [
+          "Perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.",
+          "The ultimate personal listening experience is here."
+        ]
+      },
+      {
+        "title": "Sounds like an epiphany.",
+        "text": [
+          "AirPods Max combine high-fidelity audio with industry-leading Active Noise Cancellation to deliver an unparalleled listening experience.",
+          "Each part of their custom-built driver works to produce sound with ultra-low distortion across the audible range. From deep, rich bass to accurate mids and crisp, clean highs, you'll hear every note with a new sense of clarity."
+        ]
+      },
+      {
+        "title": "Elaborately simple.",
+        "text": [
+          "AirPods Max inherit all of the wireless, effortless magic of the AirPods family. From setup to Siri commands, they make the listening experience completely fluid — day to day, device to device."
+        ]
+      }
+    ],
+    "screen": null,
+    "resolution": null,
+    "processor": null,
+    "ram": null,
+    "camera": null,
+    "zoom": null,
+    "cell": null
+  },
+  {
+    "itemId": "apple-airpods-max-spacegray",
+    "namespaceId": "apple-airpods-max",
+    "name": "Apple AirPods Max Spacegray",
+    "capacityAvailable": null,
+    "capacity": null,
+    "priceRegular": 600,
+    "priceDiscount": 570,
+    "colorsAvailable": ["silver", "blue", "green", "pink", "spacegray"],
+    "color": "spacegray",
+    "images": [
+      "img/accessories/apple-airpods-max/spacegray/00.jpg",
+      "img/accessories/apple-airpods-max/spacegray/01.jpg",
+      "img/accessories/apple-airpods-max/spacegray/02.jpg",
+      "img/accessories/apple-airpods-max/spacegray/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Introducing AirPods Max",
+        "text": [
+          "Perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.",
+          "The ultimate personal listening experience is here."
+        ]
+      },
+      {
+        "title": "Sounds like an epiphany.",
+        "text": [
+          "AirPods Max combine high-fidelity audio with industry-leading Active Noise Cancellation to deliver an unparalleled listening experience.",
+          "Each part of their custom-built driver works to produce sound with ultra-low distortion across the audible range. From deep, rich bass to accurate mids and crisp, clean highs, you'll hear every note with a new sense of clarity."
+        ]
+      },
+      {
+        "title": "Elaborately simple.",
+        "text": [
+          "AirPods Max inherit all of the wireless, effortless magic of the AirPods family. From setup to Siri commands, they make the listening experience completely fluid — day to day, device to device."
+        ]
+      }
+    ],
+    "screen": null,
+    "resolution": null,
+    "processor": null,
+    "ram": null,
+    "camera": null,
+    "zoom": null,
+    "cell": null
+  }
+]
