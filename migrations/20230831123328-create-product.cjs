@@ -14,18 +14,12 @@ module.exports = {
         type: Sequelize.STRING,
       },
 
-      phoneId: {
-        type: Sequelize.STRING,
-        field: 'phone_id',
-        references: {
-          model: 'phones',
-          key: 'id',
-        }
-      },
       itemId: {
         type: Sequelize.STRING,
         field: 'item_id',
+        unique: true,
       },
+
       name: {
         type: Sequelize.STRING,
       },

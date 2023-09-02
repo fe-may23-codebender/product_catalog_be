@@ -10,8 +10,8 @@ export const getAll = async (req: Request, res: Response) => {
 };
 
 export const getOne = async (req: Request, res: Response) => {
-  const { phoneId } = req.params;
-  const foundPhone = await getById(phoneId);
+  const { itemId } = req.params;
+  const foundPhone = await getById(itemId);
 
   if (!foundPhone) {
     res.status(404).send('Phone not found');

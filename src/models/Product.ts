@@ -3,10 +3,9 @@ import {
   Table,
   Column,
   PrimaryKey,
-  ForeignKey,
+  AllowNull,
 } from 'sequelize-typescript';
 import { ProductInterface } from '../types/Product';
-import { Phone } from './Phone';
 
 @Table({
   tableName: 'products',
@@ -15,21 +14,16 @@ import { Phone } from './Phone';
 })
 export class Product extends Model<ProductInterface> {
   @PrimaryKey
+  @AllowNull(false)
   @Column
-    id: string;
+    id: number;
 
   @Column
     category: string;
 
-  @ForeignKey(() => Phone)
-  @Column({
-    field: 'phone_id',
-  })
-    phoneId: string;
-
-
   @Column({
     field: 'item_id',
+    unique: true,
   })
     itemId: string;
 

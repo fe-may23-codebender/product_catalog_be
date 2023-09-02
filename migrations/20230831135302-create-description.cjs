@@ -11,13 +11,9 @@ module.exports = {
         autoIncrement: true,
       },
 
-      phoneId: {
+      itemId: {
         type: Sequelize.STRING,
-        field: 'phone_id',
-        references: {
-          model: 'phones',
-          key: 'id',
-        },
+        field: 'item_id',
       },
 
       title: {
