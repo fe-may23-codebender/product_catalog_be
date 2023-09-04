@@ -92,6 +92,98 @@
     "cell": ["Wi-Fi", "Wi-Fi + LTE"]
   },
   {
+    "itemId": "apple-ipad-air-128gb-spacegray",
+    "namespaceId": "apple-ipad-air",
+    "name": "Apple iPad Air 64GB Spacegray",
+    "capacityAvailable": ["64GB", "128GB"],
+    "capacity": "128GB",
+    "priceRegular": 450,
+    "priceDiscount": 400,
+    "colorsAvailable": ["spacegray", "silver"],
+    "color": "spacegray",
+    "images": [
+      "img/tablets/apple-ipad-air/spacegray/00.jpg",
+      "img/tablets/apple-ipad-air/spacegray/01.jpg",
+      "img/tablets/apple-ipad-air/spacegray/02.jpg",
+      "img/tablets/apple-ipad-air/spacegray/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Easy does it all",
+        "text": [
+          "Powerful. Easy to use. Versatile. iPad is designed for all the things you love to do.",
+          "Work, play, create, learn, stay connected, and more. All at an incredible value."
+        ]
+      },
+      {
+        "title": "Write it down. Type it up",
+        "text": [
+          "Take unforgettable notes, create a work of art, mark up screenshots, and much more.",
+          "Using Apple Pencil is as natural as putting pen to paper, but with capabilities that make handwriting as powerful as typed text."
+        ]
+      },
+      {
+        "title": "iPadOS smooth operating system",
+        "text": [
+          "iPadOS pushes the capabilities of iPad further with more discoverable multitasking, new ways to find and organize information, and enhanced note‑taking."
+        ]
+      }
+    ],
+    "screen": "10.2' IPS",
+    "resolution": "2160x1620",
+    "processor": "Apple A13 Bionic",
+    "ram": "8GB",
+    "camera": "12 Mp + 7 Mp",
+    "zoom": "Digital, 5x",
+    "cell": ["Wi-Fi", "Wi-Fi + LTE"]
+  },
+  {
+    "itemId": "apple-ipad-air-128gb-silver",
+    "namespaceId": "apple-ipad-air",
+    "name": "Apple iPad Air 64GB Silver",
+    "capacityAvailable": ["64GB", "128GB"],
+    "capacity": "128GB",
+    "priceRegular": 400,
+    "priceDiscount": 375,
+    "colorsAvailable": ["spacegray", "silver"],
+    "color": "silver",
+    "images": [
+      "img/tablets/apple-ipad-air/silver/00.jpg",
+      "img/tablets/apple-ipad-air/silver/01.jpg",
+      "img/tablets/apple-ipad-air/silver/02.jpg",
+      "img/tablets/apple-ipad-air/silver/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "Easy does it all",
+        "text": [
+          "Powerful. Easy to use. Versatile. iPad is designed for all the things you love to do.",
+          "Work, play, create, learn, stay connected, and more. All at an incredible value."
+        ]
+      },
+      {
+        "title": "Write it down. Type it up",
+        "text": [
+          "Take unforgettable notes, create a work of art, mark up screenshots, and much more.",
+          "Using Apple Pencil is as natural as putting pen to paper, but with capabilities that make handwriting as powerful as typed text."
+        ]
+      },
+      {
+        "title": "iPadOS smooth operating system",
+        "text": [
+          "iPadOS pushes the capabilities of iPad further with more discoverable multitasking, new ways to find and organize information, and enhanced note‑taking."
+        ]
+      }
+    ],
+    "screen": "10.2' IPS",
+    "resolution": "2160x1620",
+    "processor": "Apple A13 Bionic",
+    "ram": "8GB",
+    "camera": "12 Mp + 7 Mp",
+    "zoom": "Digital, 5x",
+    "cell": ["Wi-Fi", "Wi-Fi + LTE"]
+  },
+  {
     "itemId": "apple-ipad-mini-64gb-spacegray",
     "namespaceId": "apple-ipad-mini",
     "name": "Apple iPad Mini 64GB Spacegray",
@@ -272,6 +364,186 @@
     "cell": ["Wi-Fi", "Wi-Fi + LTE"]
   },
   {
+    "itemId": "apple-ipad-mini-128gb-spacegray",
+    "namespaceId": "apple-ipad-mini",
+    "name": "Apple iPad Mini 64GB Spacegray",
+    "capacityAvailable": ["64GB", "128GB"],
+    "capacity": "128GB",
+    "priceRegular": 780,
+    "priceDiscount": 650,
+    "colorsAvailable": ["spacegray", "pink", "starlight", "purple"],
+    "color": "spacegray",
+    "images": [
+      "img/tablets/apple-ipad-mini/spacegray/00.jpg",
+      "img/tablets/apple-ipad-mini/spacegray/01.jpg",
+      "img/tablets/apple-ipad-mini/spacegray/02.jpg",
+      "img/tablets/apple-ipad-mini/spacegray/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "All-screen design. Stunning all around.",
+        "text": [
+          "iPad mini is meticulously designed to be absolutely beautiful. An all-new enclosure features a new, larger edge-to-edge screen, along with narrow borders and elegant rounded corners."
+        ]
+      },
+      {
+        "title": "Small is the new powerful.",
+        "text": [
+          "The new A15 Bionic chip makes iPad mini just as powerful as it is portable. Whether you’re tearing through your inbox or editing photos with Photoshop, it has the power to do it all.",
+          "Use advanced apps, capture brilliant content, and bring your creative projects to life, anywhere."
+        ]
+      },
+      {
+        "title": "Upload. Download. On the road.",
+        "text": [
+          "Join superfast 5G wireless networks when you're on the go. Download files, play multiplayer games, stream movies, check in with friends, and more."
+        ]
+      }
+    ],
+    "screen": "8.3' IPS",
+    "resolution": "2266x1488",
+    "processor": "Apple A15 Bionic",
+    "ram": "8GB",
+    "camera": "12 Mp + 7 Mp",
+    "zoom": "Digital, 5x",
+    "cell": ["Wi-Fi", "Wi-Fi + LTE"]
+  },
+  {
+    "itemId": "apple-ipad-mini-128gb-pink",
+    "namespaceId": "apple-ipad-mini",
+    "name": "Apple iPad Mini 64GB Pink",
+    "capacityAvailable": ["64GB", "128GB"],
+    "capacity": "128GB",
+    "priceRegular": 780,
+    "priceDiscount": 650,
+    "colorsAvailable": ["spacegray", "pink", "starlight", "purple"],
+    "color": "pink",
+    "images": [
+      "img/tablets/apple-ipad-mini/pink/00.jpg",
+      "img/tablets/apple-ipad-mini/pink/01.jpg",
+      "img/tablets/apple-ipad-mini/pink/02.jpg",
+      "img/tablets/apple-ipad-mini/pink/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "All-screen design. Stunning all around.",
+        "text": [
+          "iPad mini is meticulously designed to be absolutely beautiful. An all-new enclosure features a new, larger edge-to-edge screen, along with narrow borders and elegant rounded corners."
+        ]
+      },
+      {
+        "title": "Small is the new powerful.",
+        "text": [
+          "The new A15 Bionic chip makes iPad mini just as powerful as it is portable. Whether you’re tearing through your inbox or editing photos with Photoshop, it has the power to do it all.",
+          "Use advanced apps, capture brilliant content, and bring your creative projects to life, anywhere."
+        ]
+      },
+      {
+        "title": "Upload. Download. On the road.",
+        "text": [
+          "Join superfast 5G wireless networks when you're on the go. Download files, play multiplayer games, stream movies, check in with friends, and more."
+        ]
+      }
+    ],
+    "screen": "8.3' IPS",
+    "resolution": "2266x1488",
+    "processor": "Apple A15 Bionic",
+    "ram": "8GB",
+    "camera": "12 Mp + 7 Mp",
+    "zoom": "Digital, 5x",
+    "cell": ["Wi-Fi", "Wi-Fi + LTE"]
+  },
+  {
+    "itemId": "apple-ipad-mini-128gb-starlight",
+    "namespaceId": "apple-ipad-mini",
+    "name": "Apple iPad Mini 64GB Starlight",
+    "capacityAvailable": ["64GB", "128GB"],
+    "capacity": "128GB",
+    "priceRegular": 780,
+    "priceDiscount": 650,
+    "colorsAvailable": ["spacegray", "pink", "starlight", "purple"],
+    "color": "starlight",
+    "images": [
+      "img/tablets/apple-ipad-mini/starlight/00.jpg",
+      "img/tablets/apple-ipad-mini/starlight/01.jpg",
+      "img/tablets/apple-ipad-mini/starlight/02.jpg",
+      "img/tablets/apple-ipad-mini/starlight/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "All-screen design. Stunning all around.",
+        "text": [
+          "iPad mini is meticulously designed to be absolutely beautiful. An all-new enclosure features a new, larger edge-to-edge screen, along with narrow borders and elegant rounded corners."
+        ]
+      },
+      {
+        "title": "Small is the new powerful.",
+        "text": [
+          "The new A15 Bionic chip makes iPad mini just as powerful as it is portable. Whether you’re tearing through your inbox or editing photos with Photoshop, it has the power to do it all.",
+          "Use advanced apps, capture brilliant content, and bring your creative projects to life, anywhere."
+        ]
+      },
+      {
+        "title": "Upload. Download. On the road.",
+        "text": [
+          "Join superfast 5G wireless networks when you're on the go. Download files, play multiplayer games, stream movies, check in with friends, and more."
+        ]
+      }
+    ],
+    "screen": "8.3' IPS",
+    "resolution": "2266x1488",
+    "processor": "Apple A15 Bionic",
+    "ram": "8GB",
+    "camera": "12 Mp + 7 Mp",
+    "zoom": "Digital, 5x",
+    "cell": ["Wi-Fi", "Wi-Fi + LTE"]
+  },
+  {
+    "itemId": "apple-ipad-mini-128gb-purple",
+    "namespaceId": "apple-ipad-mini",
+    "name": "Apple iPad Mini 64GB Purple",
+    "capacityAvailable": ["64GB", "128GB"],
+    "capacity": "128GB",
+    "priceRegular": 780,
+    "priceDiscount": 650,
+    "colorsAvailable": ["spacegray", "pink", "starlight", "purple"],
+    "color": "purple",
+    "images": [
+      "img/tablets/apple-ipad-mini/purple/00.jpg",
+      "img/tablets/apple-ipad-mini/purple/01.jpg",
+      "img/tablets/apple-ipad-mini/purple/02.jpg",
+      "img/tablets/apple-ipad-mini/purple/03.jpg"
+    ],
+    "description": [
+      {
+        "title": "All-screen design. Stunning all around.",
+        "text": [
+          "iPad mini is meticulously designed to be absolutely beautiful. An all-new enclosure features a new, larger edge-to-edge screen, along with narrow borders and elegant rounded corners."
+        ]
+      },
+      {
+        "title": "Small is the new powerful.",
+        "text": [
+          "The new A15 Bionic chip makes iPad mini just as powerful as it is portable. Whether you’re tearing through your inbox or editing photos with Photoshop, it has the power to do it all.",
+          "Use advanced apps, capture brilliant content, and bring your creative projects to life, anywhere."
+        ]
+      },
+      {
+        "title": "Upload. Download. On the road.",
+        "text": [
+          "Join superfast 5G wireless networks when you're on the go. Download files, play multiplayer games, stream movies, check in with friends, and more."
+        ]
+      }
+    ],
+    "screen": "8.3' IPS",
+    "resolution": "2266x1488",
+    "processor": "Apple A15 Bionic",
+    "ram": "8GB",
+    "camera": "12 Mp + 7 Mp",
+    "zoom": "Digital, 5x",
+    "cell": ["Wi-Fi", "Wi-Fi + LTE"]
+  },
+  {
     "itemId": "apple-ipad-pro-128gb-spacegray",
     "namespaceId": "apple-ipad-pro",
     "name": "Apple iPad Pro 128GB Spacegray",
@@ -325,6 +597,102 @@
     "name": "Apple iPad Pro 128GB Silver",
     "capacityAvailable": ["128GB", "256GB"],
     "capacity": "128GB",
+    "priceRegular": 1700,
+    "priceDiscount": 1500,
+    "colorsAvailable": ["spacegray", "silver"],
+    "color": "silver",
+    "images": [
+      "img/tablets/apple-ipad-pro/silver/00.jpg",
+      "img/tablets/apple-ipad-pro/silver/01.jpg",
+      "img/tablets/apple-ipad-pro/silver/02.jpg",
+      "img/tablets/apple-ipad-pro/silver/03.jpg",
+      "img/tablets/apple-ipad-pro/silver/04.jpg"
+    ],
+    "description": [
+      {
+        "title": "Easy on the eyes. Easy to carry.",
+        "text": [
+          "The Liquid Retina display on the 12.9-inch iPad Pro is not only gorgeous and portable, it also features incredibly advanced technologies.",
+          "Like ProMotion, True Tone, P3 wide color, and ultralow reflectivity, which make everything feel responsive and look stunning."
+        ]
+      },
+      {
+        "title": "Pro cameras.",
+        "text": [
+          "Advanced Wide and Ultra Wide cameras help you capture the perfect photo or video. And now with support for ProRes video capture, iPad Pro is a complete mobile video studio. ",
+          "The more powerful ISP in the M2 chip also supports Smart HDR 4, so photos shot on iPad look even more true to life."
+        ]
+      },
+      {
+        "title": "Pro accessories.",
+        "text": [
+          "Apple Pencil, Magic Keyboard, and the Smart Keyboard Folio open up even more ways to use iPad Pro.",
+          "Draw a masterpiece, take notes, or knock out a business plan. These versatile accessories are designed to take your work and creativity to the next level."
+        ]
+      }
+    ],
+    "screen": "12.9' Liquid Retina XDR",
+    "resolution": "2732x2048",
+    "processor": "Apple M2",
+    "ram": "8GB",
+    "camera": "12 Mp + 10 Mp",
+    "zoom": "Digital, 5x",
+    "cell": ["Wi-Fi", "Wi-Fi + LTE"]
+  },
+  {
+    "itemId": "apple-ipad-pro-256gb-spacegray",
+    "namespaceId": "apple-ipad-pro",
+    "name": "Apple iPad Pro 128GB Spacegray",
+    "capacityAvailable": ["128GB", "256GB"],
+    "capacity": "256GB",
+    "priceRegular": 1700,
+    "priceDiscount": 1500,
+    "colorsAvailable": ["spacegray", "silver"],
+    "color": "spacegray",
+    "images": [
+      "img/tablets/apple-ipad-pro/spacegray/00.jpg",
+      "img/tablets/apple-ipad-pro/spacegray/01.jpg",
+      "img/tablets/apple-ipad-pro/spacegray/02.jpg",
+      "img/tablets/apple-ipad-pro/spacegray/03.jpg",
+      "img/tablets/apple-ipad-pro/spacegray/04.jpg"
+    ],
+    "description": [
+      {
+        "title": "Easy on the eyes. Easy to carry.",
+        "text": [
+          "The Liquid Retina display on the 12.9-inch iPad Pro is not only gorgeous and portable, it also features incredibly advanced technologies.",
+          "Like ProMotion, True Tone, P3 wide color, and ultralow reflectivity, which make everything feel responsive and look stunning."
+        ]
+      },
+      {
+        "title": "Pro cameras.",
+        "text": [
+          "Advanced Wide and Ultra Wide cameras help you capture the perfect photo or video. And now with support for ProRes video capture, iPad Pro is a complete mobile video studio.",
+          "The more powerful ISP in the M2 chip also supports Smart HDR 4, so photos shot on iPad look even more true to life."
+        ]
+      },
+      {
+        "title": "Pro accessories.",
+        "text": [
+          "Apple Pencil, Magic Keyboard, and the Smart Keyboard Folio open up even more ways to use iPad Pro.",
+          "Draw a masterpiece, take notes, or knock out a business plan. These versatile accessories are designed to take your work and creativity to the next level."
+        ]
+      }
+    ],
+    "screen": "12.9' Liquid Retina XDR",
+    "resolution": "2732x2048",
+    "processor": "Apple M2",
+    "ram": "8GB",
+    "camera": "12 Mp + 10 Mp",
+    "zoom": "Digital, 5x",
+    "cell": ["Wi-Fi", "Wi-Fi + LTE"]
+  },
+  {
+    "itemId": "apple-ipad-pro-256gb-silver",
+    "namespaceId": "apple-ipad-pro",
+    "name": "Apple iPad Pro 128GB Silver",
+    "capacityAvailable": ["128GB", "256GB"],
+    "capacity": "256GB",
     "priceRegular": 1700,
     "priceDiscount": 1500,
     "colorsAvailable": ["spacegray", "silver"],
