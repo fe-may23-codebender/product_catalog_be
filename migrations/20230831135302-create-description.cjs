@@ -14,6 +14,10 @@ module.exports = {
       itemId: {
         type: Sequelize.STRING,
         field: 'item_id',
+        references: {
+          model: 'details',
+          key: 'item_id',
+        }
       },
 
       title: {

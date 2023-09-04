@@ -13,8 +13,8 @@ export const getAll = async (req: Request, res: Response) => {
 };
 
 export const getOne = async (req: Request, res: Response) => {
-  const { phoneId } = req.params;
-  const foundDescription = await getByPhoneId(phoneId);
+  const { itemId } = req.params;
+  const foundDescription = await getByPhoneId(itemId);
 
   if (!foundDescription) {
     res.status(404).send('Description not found');

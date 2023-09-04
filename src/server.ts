@@ -5,10 +5,8 @@ dotenv.config();
 
 import { connect } from './utils/db';
 import { productRouter } from './routers/products.router';
-import { phonesRouter } from './routers/phones.router';
+import { detailRouter } from './routers/detail.router';
 import { descriptionsRouter } from './routers/descriptions.router';
-import { tabletRouter } from './routers/tablets.router';
-import { accessoryRouter } from './routers/accessories.router';
 import { statsRouter } from './routers/stats.router';
 import { homepageRouter } from './routers/homepage.router';
 
@@ -26,10 +24,8 @@ app
     res.send('Product catalog API');
   })
   .use('/products', productRouter)
-  .use('/phones', phonesRouter)
+  .use('/details', detailRouter)
   .use('/descriptions', descriptionsRouter)
-  .use('/tablets', tabletRouter)
-  .use('/accessories', accessoryRouter)
   .use('/stats', statsRouter)
   .use('/homepage', homepageRouter);
 app.listen(PORT, () => {
