@@ -3,9 +3,13 @@
 import { Description } from '../models/Description';
 
 export const getAllDescriptions = async () => {
-  const descriptions = await Description.findAll();
+  try {
+    const descriptions = await Description.findAll();
 
-  return descriptions;
+    return descriptions;
+  } catch (error) {
+    console.log('service', error);
+  }
 };
 
 export const getByPhoneId = async (phoneId: string) => {

@@ -4,7 +4,6 @@ import {
   Column,
   ForeignKey,
   DataType,
-  BelongsTo,
 } from 'sequelize-typescript';
 import { Phone } from './Phone';
 import { DescriptionInterface } from '../types/Description';
@@ -23,10 +22,7 @@ export class Description extends Model<DescriptionInterface> {
 
   @ForeignKey(() => Phone)
   @Column({
-    field: 'phone_id',
+    field: 'item_id',
   })
-    phoneId: string;
-
-  @BelongsTo(() => Phone)
-    phone: Phone;
+    itemId: string;
 }
