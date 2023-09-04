@@ -5,6 +5,7 @@ import { getAllProducts, getById } from '../services/products.service';
 
 const sortOptions = ['age', 'title', 'price', ''];
 const perPageOptions = ['4', '8', '16', 'all'];
+const categoryOptions = ['', 'phones', 'tablets', 'accessories'];
 
 export const getAll = async (req: Request, res: Response) => {
   const query = req.query;
@@ -13,19 +14,31 @@ export const getAll = async (req: Request, res: Response) => {
     perPage = 'all',
     page = '1',
     sortBy = '',
+    productType = '',
   } = query;
-  if (typeof sortBy !== 'string'
-    || !sortOptions.includes(sortBy)
-    || typeof perPage !== 'string'
-    || !perPageOptions.includes(perPage)
-    || (perPage === 'all' && page !== '1')
-    || typeof page !== 'string'
-    || typeof search !== 'string') {
+
+  const productTypeString = productType as string;
+  if (
+    typeof sortBy !== 'string' ||
+    !sortOptions.includes(sortBy) ||
+    typeof perPage !== 'string' ||
+    !perPageOptions.includes(perPage) ||
+    (perPage === 'all' && page !== '1') ||
+    typeof page !== 'string' ||
+    typeof search !== 'string' ||
+    !categoryOptions.includes(productTypeString)
+  ) {
     res.sendStatus(422);
     return;
   }
 
-  const products = await getAllProducts({ search, perPage, page, sortBy });
+  const products = await getAllProducts({
+    search,
+    perPage,
+    page,
+    sortBy,
+    productTypeString,
+  });
 
   res.send(products);
 };
