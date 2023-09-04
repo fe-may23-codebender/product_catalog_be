@@ -2,39 +2,23 @@
 
 import { Order } from 'sequelize';
 import { Product } from '../models/Product';
-import { ProductInterface } from '../types/Product';
 
 type Query = {
-  sortBy: string,
-  search: string,
-  page: string,
-  perPage: string,
+  sortBy: string;
+  search: string;
+  page: string;
+  perPage: string;
+  productTypeString: string;
 };
 
-type countByCategory = {
-  [category: string]: number;
-}
-
-function calculateByGroup(products: ProductInterface[]) {
-  const countByGroup: countByCategory = {
-    'phones': 0,
-    'tablets': 0,
-    'accessories': 0,
-  };
-
-  products.forEach(product => {
-    if (!(product.category in countByGroup)) {
-      countByGroup[product.category] = 0;
-    }
-    countByGroup[product.category]++;
-  });
-
-  return countByGroup;
-}
-
-export const getAllProducts = async ({ search, perPage, page, sortBy }: Query) => {
+export const getAllProducts = async ({
+  search,
+  perPage,
+  page,
+  sortBy,
+  productTypeString,
+}: Query) => {
   let products = await Product.findAll();
-  const allProducts = calculateByGroup(products);
 
   const order: Order = [];
 
@@ -55,9 +39,12 @@ export const getAllProducts = async ({ search, perPage, page, sortBy }: Query) =
     break;
   }
 
-  if (perPage === 'all') {
+  if (perPage === 'all' && page === '1') {
     products = await Product.findAll({
       order,
+      where: {
+        category: productTypeString,
+      }
     });
   } else {
     const limit = +perPage;
@@ -66,6 +53,9 @@ export const getAllProducts = async ({ search, perPage, page, sortBy }: Query) =
       offset,
       limit,
       order,
+      where: {
+        category: productTypeString,
+      }
     });
   }
 
@@ -78,10 +68,7 @@ export const getAllProducts = async ({ search, perPage, page, sortBy }: Query) =
     });
   }
 
-  return {
-    countByGroup: allProducts,
-    items: products,
-  };
+  return products;
 };
 
 export const getById = async (productId: string) => {
