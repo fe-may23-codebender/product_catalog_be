@@ -4,8 +4,10 @@ import {
   Column,
   PrimaryKey,
   AllowNull,
+  ForeignKey,
 } from 'sequelize-typescript';
 import { ProductInterface } from '../types/Product';
+import { Detail } from './Detail';
 
 @Table({
   tableName: 'products',
@@ -21,9 +23,9 @@ export class Product extends Model<ProductInterface> {
   @Column
     category: string;
 
+  @ForeignKey(() => Detail)
   @Column({
     field: 'item_id',
-    unique: true,
   })
     itemId: string;
 

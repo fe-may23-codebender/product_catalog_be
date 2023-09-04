@@ -5,7 +5,7 @@ import { getAllProducts, getById } from '../services/products.service';
 
 const sortOptions = ['age', 'title', 'price', ''];
 const perPageOptions = ['4', '8', '16', 'all'];
-const categoryOptions = ['', 'phones', 'tablets', 'accessories'];
+const categoryOptions = ['phones', 'tablets', 'accessories'];
 
 export const getAll = async (req: Request, res: Response) => {
   const query = req.query;
@@ -14,7 +14,7 @@ export const getAll = async (req: Request, res: Response) => {
     perPage = 'all',
     page = '1',
     sortBy = '',
-    productType = '',
+    productType = 'phones',
   } = query;
 
   const productTypeString = productType as string;

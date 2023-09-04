@@ -1,4 +1,4 @@
-export interface PhoneInterface {
+export interface DetailInterface {
   id: number;
   itemId: string;
   namespaceId: string;

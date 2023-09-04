@@ -5,14 +5,14 @@ import {
   DataType,
   PrimaryKey,
 } from 'sequelize-typescript';
-import { PhoneInterface } from '../types/Phone';
+import { DetailInterface } from '../types/Detail';
 
 @Table({
-  tableName: 'phones',
-  modelName: 'Phone',
+  tableName: 'details',
+  modelName: 'Detail',
   timestamps: false,
 })
-export class Phone extends Model<PhoneInterface> {
+export class Detail extends Model<DetailInterface> {
   @PrimaryKey
   @Column({
     type: DataType.INTEGER,
@@ -21,6 +21,7 @@ export class Phone extends Model<PhoneInterface> {
 
   @Column({
     type: DataType.STRING,
+    field: 'item_id',
   })
     itemId: string;
 

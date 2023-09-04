@@ -1,15 +1,15 @@
 'use strict';
 
-import { Phone } from '../models/Phone';
+import { Detail } from '../models/Detail';
 
 export const getAllPhones = async () => {
-  const phones = await Phone.findAll();
+  const phones = await Detail.findAll();
 
   return phones;
 };
 
 export const getById = async (itemId: string) => {
-  const phone = await Phone.findAll({
+  const phone = await Detail.findAll({
     where: {
       itemId: itemId,
     } as { itemId: string },

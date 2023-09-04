@@ -1,7 +1,7 @@
 'use strict';
 
 import { Sequelize } from 'sequelize-typescript';
-import { Product, Phone, Description, Tablet, Accessory } from '../models';
+import { Product, Detail, Description } from '../models';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -9,7 +9,7 @@ const { DB_PASSWORD, DB_HOST, DB_USER, DB_NAME } = process.env;
 const URI = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`;
 
 export const sequelize = new Sequelize(URI, {
-  models: [Description, Phone, Tablet, Accessory, Product],
+  models: [Product, Detail, Description],
   dialectOptions: {
     ssl: {
       require: true,

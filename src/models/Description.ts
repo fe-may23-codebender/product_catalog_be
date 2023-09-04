@@ -5,7 +5,7 @@ import {
   ForeignKey,
   DataType,
 } from 'sequelize-typescript';
-import { Phone } from './Phone';
+import { Detail } from './Detail';
 import { DescriptionInterface } from '../types/Description';
 
 @Table({
@@ -20,7 +20,7 @@ export class Description extends Model<DescriptionInterface> {
   @Column(DataType.ARRAY(DataType.TEXT))
     text: string[];
 
-  @ForeignKey(() => Phone)
+  @ForeignKey(() => Detail)
   @Column({
     field: 'item_id',
   })
