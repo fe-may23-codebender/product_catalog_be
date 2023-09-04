@@ -10,6 +10,7 @@ import { descriptionsRouter } from './routers/descriptions.router';
 import { tabletRouter } from './routers/tablets.router';
 import { accessoryRouter } from './routers/accessories.router';
 import { statsRouter } from './routers/stats.router';
+import { homepageRouter } from './routers/homepage.router';
 
 connect();
 
@@ -29,7 +30,8 @@ app
   .use('/descriptions', descriptionsRouter)
   .use('/tablets', tabletRouter)
   .use('/accessories', accessoryRouter)
-  .use('/stats', statsRouter);
+  .use('/stats', statsRouter)
+  .use('/homepage', homepageRouter);
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
 });
