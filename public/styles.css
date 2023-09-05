@@ -1,0 +1,116 @@
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  padding: 30px 50px;
+  border-bottom: 1px solid rgb(56, 56, 56);
+}
+
+.a-title {
+  text-decoration: none;
+  color: rgb(56, 56, 56);
+  font-size: 1rem;
+}
+
+h1 {
+  margin: 0;
+  color: rgb(56, 56, 56)
+}
+
+h2 {
+  color: rgb(56, 56, 56);
+  margin-top: 50px;
+}
+
+h2::before {
+  content: '>> ';
+}
+
+code:not(pre code) {
+  background-color: grey;
+  padding: 3px 12px;
+  border-radius: 5px;
+  color: rgb(226, 226, 226);
+}
+
+a {
+  color: rgb(88, 85, 85);
+}
+
+li {
+  list-style-type: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.btn-github {
+  display: block;
+  padding: 15px 20px;
+  max-width: 150px;
+  margin-top: 30px;
+
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: rgb(22, 21, 21);
+  color: rgb(226, 226, 226);
+  font-size: 0.9rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-github:hover {
+  box-shadow: 2px 2px 12px black;
+}
+
+.main-content {
+  margin-top: 20px;
+  margin-inline: 50px;
+}
+
+@media (min-width: 900px) {
+  .main-content {
+    margin-inline: 150px;
+  }
+
+  header {
+    padding: 30px 50px 30px 150px;
+  }
+}
+
+pre {
+  overflow-x: auto;
+  background-color: rgb(22, 21, 21);
+  border-radius: 5px;
+  color: rgb(226, 226, 226);
+  display: flex;
+  align-items: center;
+}
+
+.params-code {
+  display: block;
+  margin-top: 10px;
+}
+
+.params-code .param-name {
+  text-decoration: underline;
+}
+
+.amp {
+  color: rgb(255, 150, 168);
+}
+
+.cm {
+  color: rgb(139, 139, 139);
+}

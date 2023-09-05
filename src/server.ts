@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import fs from 'fs';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -16,12 +17,20 @@ const PORT = process.env.PORT;
 // const CLIENT_URL = process.env.CLIENT_URL;
 
 const app = express();
+app.use(express.static('public'));
 
 app
   .use(cors({ origin: '*' }))
   .use(express.json())
   .get('/', (req, res) => {
-    res.send('Product catalog API');
+    fs.readFile('public/index.html', 'utf8', (err, data) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send('Error reading documentation file');
+      } else {
+        res.send(data);
+      }
+    });
   })
   .use('/products', productRouter)
   .use('/details', detailRouter)
