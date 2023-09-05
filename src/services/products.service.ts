@@ -1,6 +1,6 @@
 'use strict';
 
-import { Order } from 'sequelize';
+import { Op, Order, OrderItem } from 'sequelize';
 import { Product } from '../models/Product';
 
 type Query = {
@@ -11,6 +11,18 @@ type Query = {
   productTypeString: string;
 };
 
+type ProductQuery = {
+  order?: OrderItem[];
+  offset?: number;
+  limit?: number;
+  where: {
+    name?: {
+      [Op.iLike]: string;
+    };
+    category?: string;
+  };
+};
+
 export const getAllProducts = async ({
   search,
   perPage,
@@ -18,9 +30,13 @@ export const getAllProducts = async ({
   sortBy,
   productTypeString,
 }: Query) => {
-  let products = await Product.findAll();
-
   const order: Order = [];
+  const query: ProductQuery = {
+    where: {
+      name: undefined,
+      category: undefined
+    }
+  };
 
   switch (sortBy) {
   case 'age':
@@ -39,40 +55,27 @@ export const getAllProducts = async ({
     break;
   }
 
-  if (perPage === 'all' && page === '1') {
-    products = await Product.findAll({
-      order,
-    });
-  } else {
+  query.order = order;
+
+  if (perPage !== 'all' || page !== '1') {
     const limit = +perPage;
-    const offset = perPage === '1' ? 0 : (+page - 1) * limit;
-    products = await Product.findAll({
-      offset,
-      limit,
-      order,
-    });
+    const offset = (+page - 1) * limit;
+    query.limit = limit;
+    query.offset = offset;
   }
 
   if (productTypeString) {
-    if (productTypeString === '') {
-      return products;
-    } else {
-      products = products.filter(
-        (product) => product.category === productTypeString,
-      );
-    }
+    query.where.category = productTypeString;
   }
 
   if (search) {
     const normalizedSearch = search.toLowerCase().trim();
-
-    products = products.filter((product) => {
-      const normalizedTitle = product.name.toLowerCase().trim();
-      return normalizedTitle.includes(normalizedSearch);
-    });
+    query.where.name = {
+      [Op.iLike]: `%${normalizedSearch}%`,
+    };
   }
 
-  return products;
+  return Product.findAll(query);
 };
 
 export const getById = async (productId: string) => {
