@@ -42,9 +42,6 @@ export const getAllProducts = async ({
   if (perPage === 'all' && page === '1') {
     products = await Product.findAll({
       order,
-      where: {
-        category: productTypeString,
-      }
     });
   } else {
     const limit = +perPage;
@@ -53,10 +50,17 @@ export const getAllProducts = async ({
       offset,
       limit,
       order,
-      where: {
-        category: productTypeString,
-      }
     });
+  }
+
+  if (productTypeString) {
+    if (productTypeString === '') {
+      return products;
+    } else {
+      products = products.filter(
+        (product) => product.category === productTypeString,
+      );
+    }
   }
 
   if (search) {
