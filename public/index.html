@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/122489e1ff.js" crossorigin="anonymous"></script>
+  <title>Codebender API</title>
+</head>
+<body>
+    <header>
+      <div class="container">
+        <a class="a-title" href="https://codebender-catalog.onrender.com">
+          <h1 class="main-title">codebender api</h1>
+        </a>
+        <a class="btn btn-github" href="https://github.com/fe-may23-codebender/product_catalog_be">
+          <i class="fa-brands fa-github"></i>
+          <span>View on GitHub</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="main-content">
+        <h2 id="api-overview">
+          API Overview
+        </h2>
+        <ul>
+          <li>
+            <a href="#base-url">Base URL</a>
+          </li>
+          <li>
+            <a href="#available-resources">Available resources</a>
+          </li>
+          <li>
+            <a href="#response-format">Response format</a>
+          </li>
+          <li>
+            <a href="#load-products">Load products</a>
+          </li>
+          <li>
+            <a href="#load-product-details">Load product details</a>
+          </li>
+          <li>
+            <a href="#load-product-descriptions">Load product descriptions</a>
+          </li>
+          <li>
+            <a href="#load-product-stats">Load product amount by category</a>
+          </li>
+          <li>
+            <a href="#load-product-homepage">Load hot price and newest products</a>
+          </li>
+        </ul>
+
+        <h2 id="base-url">Base URL</h2>
+        <p>All the requests should start with the <code>BASE_URL</code></p>
+        <pre>
+          <code>
+    <span>https://codebender-catalog.onrender.com</span>
+          </code>
+        </pre>
+
+        <h2 id="available-resources">Available resources</h2>
+        <ul>
+          <li>
+            <a href="https://codebender-catalog.onrender.com/products">Products</a>
+          </li>
+          <li>
+            <a href="https://codebender-catalog.onrender.com/details">Details</a>
+          </li>
+          <li>
+            <a href="https://codebender-catalog.onrender.com/descriptions">Descriptions</a>
+          </li>
+          <li>
+            <a href="https://codebender-catalog.onrender.com/stats">Amount by category</a>
+          </li>
+          <li>
+            <a href="https://codebender-catalog.onrender.com/homepage">Hot price and Newest products</a>
+          </li>
+        </ul>
+
+        <h2 id="response-format">Response format</h2>
+        <p>Success response contains the requested data.</p>
+        <p>Error response contains an error property</p>
+        <div class="json">
+          <div class="highlight">
+            <pre class="highlight">
+              <code>
+    <span class="p">{</span>
+    <span class="w"> </span>
+    <span class="nl">   "error": "Error message"</span>
+    <span class="w"> </span>
+    <span class="p">}</span>
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <h2 id="load-products">Load products</h2>
+        <p>
+          <strong>GET</strong>
+          <code>/products</code>
+          returns an array of products
+        </p>
+        <p>
+          <strong>GET</strong>
+          <a href="https://codebender-catalog.onrender.com/products">
+            <code>/products</code>
+          </a>
+        </p>
+        <div class="json">
+          <div class="highlight">
+            <pre class="highlight">
+              <code>
+    <span class="p">[</span>
+    <span class="w"> </span>
+    <span class="p">  {</span>
+    <span class="w"> </span>
+    <span class="nl">    "id": 1,</span>
+    <span class="nl">    "category": "phones",</span>
+    <span class="nl">    "itemId": "apple-iphone-7-32gb-black",</span>
+    <span class="nl">    "name": "Apple iPhone 7 32GB Black",</span>
+    <span class="nl">    "fullPrice": 400,</span>
+    <span class="nl">    "price": 375,</span>
+    <span class="nl">    "screen": "4.7 IPS",</span>
+    <span class="nl">    "capacity": "32GB",</span>
+    <span class="nl">    "color": "black",</span>
+    <span class="nl">    "ram": "2GB",</span>
+    <span class="nl">    "year": 2015,</span>
+    <span class="nl">    "image": "img/phones/apple-iphone-7/black/00.jpg"</span>
+    <span class="p">  }, ...</span>
+    <span class="w"> </span>
+    <span class="p">]</span>
+              </code>
+            </pre>
+          </div>
+        </div>
+        <p>
+          <strong>GET</strong>
+          <code>/products?param1=value1&amp;param2=value</code>
+          returns an array of items having:
+        </p>
+        <div class="js">
+          <div class="highlight">
+            <pre class="highlight">
+              <code>
+    <span class="nx">product.param1<span class="amp"> === </span>value1</span><span class="cm"> // for number or boolean</span>
+    <span class="amp">&amp;&amp;</span>
+    <span class="nx">product.param2<span class="amp"> === </span>'value2'</span><span class="cm"> // for strings</span>
+              </code>
+            </pre>
+          </div>
+        </div>
+        <p>
+          <strong>GET</strong> params:<br>
+          <code class="params-code">
+            <span><span class="param-name">productType</span> => phones, tablets, accessories</span><br>
+            <span><span class="param-name">search</span> => product.name.includes(search)</span><br>
+            <span><span class="param-name">perPage</span> => 4, 8, 16 products on page</span><br>
+            <span><span class="param-name">page</span> => page for pagination</span><br>
+            <span><span class="param-name">sortBy</span> => title, age, price</span>
+          </code>
+        </p>
+        <p>
+          <strong>GET</strong>
+          <code>/products/productId</code>
+          returns an item having:
+          <pre>
+            <code>
+    <span>product.id<span class="amp"> === </span>productId</span>
+            </code>
+          </pre>
+        </p>
+
+        <h2 id="load-product-details">Load product details</h2>
+        <p>
+          <strong>GET</strong>
+          <code>/details</code>
+          returns an array of product details
+        </p>
+        <p>
+          <strong>GET</strong>
+          <a href="https://codebender-catalog.onrender.com/details">
+            <code>/details</code>
+          </a>
+        </p>
+        <div class="json">
+          <div class="highlight">
+            <pre class="highlight">
+              <code>
+    <span class="p">[</span>
+    <span class="w"> </span>
+    <span class="p">  {</span>
+    <span class="w"> </span>
+    <span class="nl">    "id": 1,</span>
+    <span class="nl">    "itemId": "apple-ipad-pro-256gb-silver",</span>
+    <span class="nl">    "namespaceId": "apple-ipad-pro",</span>
+    <span class="nl">    "name": "Apple iPad Pro 128GB Silver",</span>
+    <span class="nl">    "capacityAvailable": ["128GB", "256GB"],</span>
+    <span class="nl">    "capacity": "256GB",</span>
+    <span class="nl">    "priceRegular": 1700,</span>
+    <span class="nl">    "priceDiscount": 1500,</span>
+    <span class="nl">    "colorsAvailable": ["spacegray", "silver"],</span>
+    <span class="nl">    "color": "silver",</span>
+    <span class="nl">    "images": [</span>
+    <span class="im">      "img/tablets/apple-ipad-pro/silver/00.jpg",</span>
+    <span class="im">      "img/tablets/apple-ipad-pro/silver/01.jpg",</span>
+    <span class="im">      "img/tablets/apple-ipad-pro/silver/02.jpg",</span>
+    <span class="im">      "img/tablets/apple-ipad-pro/silver/03.jpg",</span>
+    <span class="nl">    ],</span>
+    <span class="nl">    "screen": "12.9' Liquid Retina XDR",</span>
+    <span class="nl">    "resolution": "2732x2048",</span>
+    <span class="nl">    "processor": "Apple M2",</span>
+    <span class="nl">    "ram": "8GB",</span>
+    <span class="nl">    "camera": "12 Mp + 10 Mp",</span>
+    <span class="nl">    "zoom": "Digital, 5x",</span>
+    <span class="nl">    "cell": ["Wi-Fi", "Wi-Fi + LTE"]</span>
+    <span class="p">  }, ...</span>
+    <span class="w"> </span>
+    <span class="p">]</span>
+              </code>
+            </pre>
+          </div>
+        </div>
+        <p>
+          <strong>GET</strong>
+          <code>/details/itemId</code>
+          returns an item having:
+          <pre>
+            <code>
+    <span>detail.itemId<span class="amp"> === </span>itemId</span>
+            </code>
+          </pre>
+        </p>
+
+        <h2 id="load-product-descriptions">Load product descriptions</h2>
+        <p>
+          <strong>GET</strong>
+          <code>/descriptions</code>
+          returns an array of product descriptions
+        </p>
+        <p>
+          <strong>GET</strong>
+          <a href="https://codebender-catalog.onrender.com/descriptions">
+            <code>/descriptions</code>
+          </a>
+        </p>
+        <div class="json">
+          <div class="highlight">
+            <pre class="highlight">
+              <code>
+    <span class="p">[</span>
+    <span class="w"> </span>
+    <span class="p">  {</span>
+    <span class="w"> </span>
+    <span class="nl">    "id": 1,</span>
+    <span class="nl">    "title": "Easy on the eyes. Easy to carry.",</span>
+    <span class="nl">    "text": ["some long text 1", "some long text 2"],</span>
+    <span class="nl">    "itemId": "apple-ipad-pro-256gb-silver",</span>
+    <span class="w"> </span>
+    <span class="p">  }, ...</span>
+    <span class="w"> </span>
+    <span class="p">]</span>
+              </code>
+            </pre>
+          </div>
+        </div>
+        <p>
+          <strong>GET</strong>
+          <code>/descriptions/itemId</code>
+          returns all descriptions for given item:
+          <pre>
+            <code>
+    <span>descriptions.itemId<span class="amp"> === </span>itemId</span>
+            </code>
+          </pre>
+        </p>
+
+        <h2 id="load-product-stats">Load amount of products by category</h2>
+        <p>
+          <strong>GET</strong>
+          <code>/stats</code>
+          returns an object of amount of products of each category
+        </p>
+        <p>
+          <strong>GET</strong>
+          <a href="https://codebender-catalog.onrender.com/stats">
+            <code>/stats</code>
+          </a>
+        </p>
+        <div class="json">
+          <div class="highlight">
+            <pre class="highlight">
+              <code>
+    <span class="p"> {</span>
+    <span class="w"> </span>
+    <span class="nl">   "phones": 71,</span>
+    <span class="nl">   "tablets": 3,</span>
+    <span class="nl">   "accessories": 4,</span>
+    <span class="w"> </span>
+    <span class="p"> }</span>
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <h2 id="load-product-homepage">Load hot price and newest products</h2>
+        <p>
+          <strong>GET</strong>
+          <code>/homepage</code>
+          returns an object with 2 arrays hot price and newest products (10 items for each array)
+        </p>
+        <p>
+          <strong>GET</strong>
+          <a href="https://codebender-catalog.onrender.com/homepage">
+            <code>/homepage</code>
+          </a>
+        </p>
+        <div class="json">
+          <div class="highlight">
+            <pre class="highlight">
+              <code>
+    <span class="p">{</span>
+    <span class="nl">   "newest": [product1, product2, ...],</span>
+    <span class="nl">   "discount": [product1, product2, ...],</span>
+    <span class="p">}</span>
+              </code>
+            </pre>
+          </div>
+        </div>
+      </section>
+    </div>
+</body>
+</html>
