@@ -32,10 +32,7 @@ export const getAllProducts = async ({
 }: Query) => {
   const order: Order = [];
   const query: ProductQuery = {
-    where: {
-      name: undefined,
-      category: undefined
-    }
+    where: {},
   };
 
   switch (sortBy) {
