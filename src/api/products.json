@@ -1038,8 +1038,8 @@
   {
     "id": "75",
     "category": "accessories",
-    "itemId": "apple-watch-series8-41mm-starlight",
-    "name": "Apple Watch Series 8 41mm Starlight",
+    "itemId": "apple-watch-series8-32gb-starlight",
+    "name": "Apple Watch Series 8 Starlight",
     "fullPrice": 540,
     "price": 520,
     "screen": "41mm LTPO",
@@ -1052,7 +1052,7 @@
   {
     "id": "76",
     "category": "accessories",
-    "itemId": "apple-watch-se-midnight",
+    "itemId": "apple-watch-se-32gb-midnight",
     "name": "Apple Watch SE 40mm Midnight Black",
     "fullPrice": 320,
     "price": 300,
