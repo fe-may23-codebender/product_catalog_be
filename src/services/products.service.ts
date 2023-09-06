@@ -76,7 +76,11 @@ export const getAllProducts = async ({
 };
 
 export const getById = async (productId: string) => {
-  const product = await Product.findByPk(productId);
+  const product = await Product.findAll({
+    where: {
+      itemId: productId,
+    }
+  });
 
   return product;
 };
