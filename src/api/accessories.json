@@ -1,8 +1,8 @@
 [
   {
-    "itemId": "apple-watch-series8-41mm-starlight",
+    "itemId": "apple-watch-series8-32gb-starlight",
     "namespaceId": "apple-watch-series8",
-    "name": "Apple Watch Series 8 41mm Starlight",
+    "name": "Apple Watch Series 8 Starlight",
     "capacityAvailable": ["32GB"],
     "capacity": "32GB",
     "priceRegular": 540,
@@ -45,9 +45,9 @@
     "cell": ["Wi-Fi", "Bluetooth", "NFC"]
   },
   {
-    "itemId": "apple-watch-se-midnight",
+    "itemId": "apple-watch-se-32gb-midnight",
     "namespaceId": "apple-watch-se",
-    "name": "Apple Watch SE 40mm Midnight Black",
+    "name": "Apple Watch SE Midnight Black",
     "capacityAvailable": ["32GB"],
     "capacity": "32GB",
     "priceRegular": 320,
@@ -91,7 +91,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "NFC"]
   },
   {
-    "itemId": "apple-watch-se-starlight",
+    "itemId": "apple-watch-se-32gb-starlight",
     "namespaceId": "apple-watch-se",
     "name": "Apple Watch SE 40mm Starlight",
     "capacityAvailable": ["32GB"],
@@ -137,7 +137,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "NFC"]
   },
   {
-    "itemId": "apple-watch-se-white",
+    "itemId": "apple-watch-se-32gb-white",
     "namespaceId": "apple-watch-se",
     "name": "Apple Watch SE 40mm White",
     "capacityAvailable": ["32GB"],
