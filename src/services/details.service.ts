@@ -9,7 +9,7 @@ export const getAllPhones = async () => {
 };
 
 export const getById = async (itemId: string) => {
-  const phone = await Detail.findAll({
+  const phone = await Detail.findOne({
     where: {
       itemId: itemId,
     } as { itemId: string },

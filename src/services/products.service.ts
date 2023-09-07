@@ -76,7 +76,7 @@ export const getAllProducts = async ({
 };
 
 export const getById = async (productId: string) => {
-  const product = await Product.findAll({
+  const product = await Product.findOne({
     where: {
       itemId: productId,
     }
